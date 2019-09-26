@@ -49,7 +49,7 @@ namespace SamSkypeAnalizator
             var membersHtmlElements = _driver.FindElementsByCssSelector("div[role=group] > div[role=button]");
             var members = membersHtmlElements.Select(m => m.GetAttribute("aria-label").Replace(", ", string.Empty)).ToList();
 
-            //_driver.Close();
+            _driver.Close();
             return members;
         }
     }
